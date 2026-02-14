@@ -31,26 +31,36 @@
   <h1>TicTacToe</h1>
   <table>
     <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
     </tr>
 
     <tr>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
     </tr>
 
     <tr>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
     </tr>
   </table>
 
   <script>
+    var currentPlayer = 'X';
 
+    function play(cell) {
+      cell.textContent = currentPlayer;
+
+      if (currentPlayer === 'X') {
+        currentPlayer = 'O';
+      } else {
+        currentPlayer = 'X';
+      }
+    }
   </script>
 </body>
 </html>
